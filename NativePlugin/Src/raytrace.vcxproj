@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F47FECF5-36D2-4256-BF39-520F9570C3A2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>raytrace</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)\..\Out\$(Platform)\$(Configuration)</OutDir>
+    <IntDir>$(ProjectDir)\..\Int\$(Platform)\$(Configuration)</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)..\Out\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\Int\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)..\Out\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\Int\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\SDK\embree\include\embree2;..\SDK\embree\include\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\SDK\embree\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>embree.lib;Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <BuildLog>
+      <Path>$(SolutionDir)$(MSBuildProjectName).log</Path>
+    </BuildLog>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) $(ProjectDir)..\..\TestRayTrace.unity\Assets\Plugins\x86\$(TargetFileName)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\SDK\embree\include\embree2;..\SDK\embree\include\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>embree.lib;Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\SDK\embree\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <BuildLog>
+      <Path>$(SolutionDir)$(MSBuildProjectName).log</Path>
+    </BuildLog>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) $(ProjectDir)..\..\TestRayTrace.unity\Assets\Plugins\X64\$(TargetFileName)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\SDK\embree\include\embree2;..\SDK\embree\include\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>embree.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\SDK\embree\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\SDK\embree\include\embree2;..\SDK\embree\include\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\SDK\embree\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>embree.lib;WSock32.Lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\SDK\embree\include\common\image\image.h" />
+    <ClInclude Include="..\SDK\embree\include\common\math\affinespace.h" />
+    <ClInclude Include="..\SDK\embree\include\common\math\bbox.h" />
+    <ClInclude Include="..\SDK\embree\include\common\math\col3.h" />
+    <ClInclude Include="..\SDK\embree\include\common\math\col4.h" />
+    <ClInclude Include="..\SDK\embree\include\common\math\color.h" />
+    <ClInclude Include="..\SDK\embree\include\common\math\constants.h" />
+    <ClInclude Include="..\SDK\embree\include\common\math\linearspace2.h" />
+    <ClInclude Include="..\SDK\embree\include\common\math\linearspace3.h" />
+    <ClInclude Include="..\SDK\embree\include\common\math\math.h" />
+    <ClInclude Include="..\SDK\embree\include\common\math\obbox.h" />
+    <ClInclude Include="..\SDK\embree\include\common\math\quaternion.h" />
+    <ClInclude Include="..\SDK\embree\include\common\math\vec2.h" />
+    <ClInclude Include="..\SDK\embree\include\common\math\vec3.h" />
+    <ClInclude Include="..\SDK\embree\include\common\math\vec3ba.h" />
+    <ClInclude Include="..\SDK\embree\include\common\math\vec3ba_mic.h" />
+    <ClInclude Include="..\SDK\embree\include\common\math\vec3fa.h" />
+    <ClInclude Include="..\SDK\embree\include\common\math\vec3fa_mic.h" />
+    <ClInclude Include="..\SDK\embree\include\common\math\vec3ia.h" />
+    <ClInclude Include="..\SDK\embree\include\common\math\vec3ia_mic.h" />
+    <ClInclude Include="..\SDK\embree\include\common\math\vec4.h" />
+    <ClInclude Include="..\SDK\embree\include\common\sys\alloc.h" />
+    <ClInclude Include="..\SDK\embree\include\common\sys\array.h" />
+    <ClInclude Include="..\SDK\embree\include\common\sys\atomic.h" />
+    <ClInclude Include="..\SDK\embree\include\common\sys\barrier.h" />
+    <ClInclude Include="..\SDK\embree\include\common\sys\condition.h" />
+    <ClInclude Include="..\SDK\embree\include\common\sys\event.h" />
+    <ClInclude Include="..\SDK\embree\include\common\sys\filename.h" />
+    <ClInclude Include="..\SDK\embree\include\common\sys\intrinsics.h" />
+    <ClInclude Include="..\SDK\embree\include\common\sys\library.h" />
+    <ClInclude Include="..\SDK\embree\include\common\sys\mutex.h" />
+    <ClInclude Include="..\SDK\embree\include\common\sys\network.h" />
+    <ClInclude Include="..\SDK\embree\include\common\sys\platform.h" />
+    <ClInclude Include="..\SDK\embree\include\common\sys\ref.h" />
+    <ClInclude Include="..\SDK\embree\include\common\sys\regression.h" />
+    <ClInclude Include="..\SDK\embree\include\common\sys\string.h" />
+    <ClInclude Include="..\SDK\embree\include\common\sys\sysinfo.h" />
+    <ClInclude Include="..\SDK\embree\include\common\sys\thread.h" />
+    <ClInclude Include="..\SDK\embree\include\common\sys\vector.h" />
+    <ClInclude Include="..\SDK\embree\include\common\sys\vector_t.h" />
+    <ClInclude Include="Convert.h" />
+    <ClInclude Include="interface.h" />
+    <ClInclude Include="render.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\SDK\embree\include\common\image\exr.cpp" />
+    <ClCompile Include="..\SDK\embree\include\common\image\image.cpp" />
+    <ClCompile Include="..\SDK\embree\include\common\image\jpeg.cpp" />
+    <ClCompile Include="..\SDK\embree\include\common\image\magick.cpp" />
+    <ClCompile Include="..\SDK\embree\include\common\image\pfm.cpp" />
+    <ClCompile Include="..\SDK\embree\include\common\image\png.cpp" />
+    <ClCompile Include="..\SDK\embree\include\common\image\ppm.cpp" />
+    <ClCompile Include="..\SDK\embree\include\common\image\tga.cpp" />
+    <ClCompile Include="..\SDK\embree\include\common\sys\alloc.cpp" />
+    <ClCompile Include="..\SDK\embree\include\common\sys\barrier.cpp" />
+    <ClCompile Include="..\SDK\embree\include\common\sys\condition.cpp" />
+    <ClCompile Include="..\SDK\embree\include\common\sys\filename.cpp" />
+    <ClCompile Include="..\SDK\embree\include\common\sys\library.cpp" />
+    <ClCompile Include="..\SDK\embree\include\common\sys\mutex.cpp" />
+    <ClCompile Include="..\SDK\embree\include\common\sys\network.cpp" />
+    <ClCompile Include="..\SDK\embree\include\common\sys\regression.cpp" />
+    <ClCompile Include="..\SDK\embree\include\common\sys\string.cpp" />
+    <ClCompile Include="..\SDK\embree\include\common\sys\sysinfo.cpp" />
+    <ClCompile Include="..\SDK\embree\include\common\sys\thread.cpp" />
+    <ClCompile Include="interface.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="render.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\SDK\embree\include\common\sys\CMakeLists.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

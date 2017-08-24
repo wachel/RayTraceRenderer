@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="SDK">
+      <UniqueIdentifier>{003957c9-034b-491f-b176-a74c2965b2bb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\SDK\embree\include\common\image\exr.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDK\embree\include\common\image\image.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDK\embree\include\common\image\jpeg.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDK\embree\include\common\image\magick.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDK\embree\include\common\image\pfm.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDK\embree\include\common\image\png.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDK\embree\include\common\image\ppm.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDK\embree\include\common\image\tga.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDK\embree\include\common\sys\alloc.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDK\embree\include\common\sys\barrier.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDK\embree\include\common\sys\condition.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDK\embree\include\common\sys\filename.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDK\embree\include\common\sys\library.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDK\embree\include\common\sys\mutex.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDK\embree\include\common\sys\network.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDK\embree\include\common\sys\regression.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDK\embree\include\common\sys\string.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDK\embree\include\common\sys\sysinfo.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDK\embree\include\common\sys\thread.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="interface.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="render.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\SDK\embree\include\common\image\image.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\math\affinespace.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\math\bbox.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\math\col3.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\math\col4.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\math\color.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\math\constants.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\math\linearspace2.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\math\linearspace3.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\math\math.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\math\obbox.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\math\quaternion.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\math\vec2.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\math\vec3.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\math\vec3ba.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\math\vec3ba_mic.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\math\vec3fa.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\math\vec3fa_mic.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\math\vec3ia.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\math\vec3ia_mic.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\math\vec4.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\sys\alloc.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\sys\array.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\sys\atomic.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\sys\barrier.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\sys\condition.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\sys\event.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\sys\filename.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\sys\intrinsics.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\sys\library.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\sys\mutex.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\sys\network.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\sys\platform.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\sys\ref.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\sys\regression.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\sys\string.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\sys\sysinfo.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\sys\thread.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\sys\vector.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\embree\include\common\sys\vector_t.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="Convert.h" />
+    <ClInclude Include="interface.h" />
+    <ClInclude Include="render.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\SDK\embree\include\common\sys\CMakeLists.txt" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,213 @@
+fileFormatVersion: 2
+guid: 646c7ec0415c40641bbe1949afd07230
+timeCreated: 1471246934
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Ball
+    100002: Ball_2
+    100004: Ball_3
+    100006: Base
+    100008: Base_2
+    100010: Base_3
+    100012: Camera_01
+    100014: Camera_02
+    100016: Camera_03
+    100018: Cameras_GRP
+    100020: Cap_1
+    100022: Cap_1_2
+    100024: Cap_1_3
+    100026: Cap_2
+    100028: Cap_2_2
+    100030: Cap_2_3
+    100032: Cloth_10cm
+    100034: Cloth_200cm
+    100036: Cloth_50cm
+    100038: Extrude
+    100040: Extrude_2
+    100042: Extrude_3
+    100044: Floor
+    100046: Floor_2
+    100048: Floor_3
+    100050: Inner_Ball
+    100052: Inner_Ball_2
+    100054: Inner_Ball_3
+    100056: myOctaneSettings
+    100058: //RootNode
+    100060: Shader_Ball_01
+    100062: Shader_Ball_02
+    100064: Shader_Ball_03
+    100066: Shader_Ball_2_0
+    100068: Sky
+    400000: Ball
+    400002: Ball_2
+    400004: Ball_3
+    400006: Base
+    400008: Base_2
+    400010: Base_3
+    400012: Camera_01
+    400014: Camera_02
+    400016: Camera_03
+    400018: Cameras_GRP
+    400020: Cap_1
+    400022: Cap_1_2
+    400024: Cap_1_3
+    400026: Cap_2
+    400028: Cap_2_2
+    400030: Cap_2_3
+    400032: Cloth_10cm
+    400034: Cloth_200cm
+    400036: Cloth_50cm
+    400038: Extrude
+    400040: Extrude_2
+    400042: Extrude_3
+    400044: Floor
+    400046: Floor_2
+    400048: Floor_3
+    400050: Inner_Ball
+    400052: Inner_Ball_2
+    400054: Inner_Ball_3
+    400056: myOctaneSettings
+    400058: //RootNode
+    400060: Shader_Ball_01
+    400062: Shader_Ball_02
+    400064: Shader_Ball_03
+    400066: Shader_Ball_2_0
+    400068: Sky
+    2300000: Ball
+    2300002: Ball_2
+    2300004: Ball_3
+    2300006: Base
+    2300008: Base_2
+    2300010: Base_3
+    2300012: Cap_1
+    2300014: Cap_1_2
+    2300016: Cap_1_3
+    2300018: Cap_2
+    2300020: Cap_2_2
+    2300022: Cap_2_3
+    2300024: Cloth_10cm
+    2300026: Cloth_200cm
+    2300028: Cloth_50cm
+    2300030: Extrude
+    2300032: Extrude_2
+    2300034: Extrude_3
+    2300036: Floor
+    2300038: Floor_2
+    2300040: Floor_3
+    2300042: Inner_Ball
+    2300044: Inner_Ball_2
+    2300046: Inner_Ball_3
+    3300000: Ball
+    3300002: Ball_2
+    3300004: Ball_3
+    3300006: Base
+    3300008: Base_2
+    3300010: Base_3
+    3300012: Cap_1
+    3300014: Cap_1_2
+    3300016: Cap_1_3
+    3300018: Cap_2
+    3300020: Cap_2_2
+    3300022: Cap_2_3
+    3300024: Cloth_10cm
+    3300026: Cloth_200cm
+    3300028: Cloth_50cm
+    3300030: Extrude
+    3300032: Extrude_2
+    3300034: Extrude_3
+    3300036: Floor
+    3300038: Floor_2
+    3300040: Floor_3
+    3300042: Inner_Ball
+    3300044: Inner_Ball_2
+    3300046: Inner_Ball_3
+    4300000: Extrude
+    4300002: Cap_1
+    4300004: Cap_2
+    4300006: Cloth_200cm
+    4300008: Ball
+    4300010: Inner_Ball
+    4300012: Base
+    4300014: Floor
+    4300016: Extrude_2
+    4300018: Cap_1_2
+    4300020: Cap_2_2
+    4300022: Cloth_50cm
+    4300024: Ball_2
+    4300026: Inner_Ball_2
+    4300028: Base_2
+    4300030: Floor_2
+    4300032: Extrude_3
+    4300034: Cap_1_3
+    4300036: Cap_2_3
+    4300038: Cloth_10cm
+    4300040: Ball_3
+    4300042: Inner_Ball_3
+    4300044: Base_3
+    4300046: Floor_3
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
